@@ -10,8 +10,8 @@ COPY . /
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install gunicorn
 
-ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8021"
+ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8029"
 
-EXPOSE 8021
+EXPOSE 8029
 
 CMD [ "gunicorn", "main:app" ]
